@@ -1,5 +1,105 @@
-.display {
+#display {
     border: 3px solid black;
     border-radius: 2px;
     padding: 2px;
+    display: flex;
+    width: 400px;
+    height: 30px;
+}
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.buttons {
+ display: grid;
+ grid-template-columns: 93.3px 93.3px 93.3px 93.3px;
+ grid-auto-rows: 100px;
+ gap: 10px 10px;
+ grid-template-areas: 
+ "clear clear undo undo"
+ "seven eight nine add"
+ "four five six subtract"
+ "one two three multiply"
+ "zero decimal operate divide";
+}
+
+#operate {
+    grid-area: operate;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#add {
+    grid-area: add;
+}
+
+#subtract {
+    grid-area: subtract;
+}
+
+#multiply {
+    grid-area: multiply;
+}
+
+#divide {
+    grid-area: divide;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#operate {
+    grid-area: operate;
+}
+
+#clear {
+    grid-area: clear;
+}
+
+#undo {
+    grid-area: undo;
 }
