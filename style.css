@@ -1,18 +1,26 @@
-#display {
+.display {
     border: 3px solid black;
     border-radius: 2px;
     padding: 2px;
     display: flex;
-    width: 400px;
-    height: 30px;
+    width: 394px;
+    height: 75px;
+    align-items: center;
+    justify-content: end;
+    font-size: 4rem;
+    font-family: 'Crimson Pro', serif;
 }
 
-.calculator {
+.calculator-container {
     display: flex;
     justify-content: center;
-    width: 400px;
+    width: 403px;
     margin: 0 auto;
     flex-direction: column;
+    color: white;
+}
+.calculator-body {
+    background: gray;
 }
 
 .buttons {
@@ -25,7 +33,26 @@
  "seven eight nine add"
  "four five six subtract"
  "one two three multiply"
- "zero decimal operate divide";
+ "decimal zero operate divide";
+}
+
+.button {
+  /*  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Crimson Pro', serif;
+    font-size: 4rem;
+    border-radius: 10px;
+}
+
+.button:focus {
+    background-color: black;
+    color: whitesmoke;
+}
+.digit {
+    background-color: whitesmoke;
+}
+
+.operator {
+    background-color: whitesmoke;
 }
 
 #operate {
@@ -98,8 +125,10 @@
 
 #clear {
     grid-area: clear;
+    background-color: salmon;
 }
 
 #undo {
     grid-area: undo;
+    background-color: seagreen;
 }

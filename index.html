@@ -6,33 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@800&display=swap" rel="stylesheet">
     <script src="javascript.js" defer></script>
 </head>
 <body>
-    <div class="calculator">
-        <div class="display">
-            <p id="display"></p>
+    <div class="calculator-container">
+        <div class="calculator-body">
+            <div class="display">
+            </div>
+            <div class="buttons">
+                <button class="button digit" id="zero" value="0">0</button>
+                <button class="button digit" id="one" value="1">1</button>
+                <button class="button digit" id="two" value="2">2</button>
+                <button class="button digit" id="three" value="3">3</button>
+                <button class="button digit" id="four" value="4">4</button>
+                <button class="button digit" id="five" value="5">5</button>
+                <button class="button digit" id="six" value="6">6</button>
+                <button class="button digit" id="seven" value="7">7</button>
+                <button class="button digit" id="eight" value="8">8</button>
+                <button class="button digit" id="nine" value="9">9</button>
+                <button class="button operator" id="add" value="+">+</button>
+                <button class="button operator" id="subtract" value="-">-</button>
+                <button class="button operator" id="multiply" value="*">×</button>
+                <button class="button operator" id="divide" value="/">÷</button>
+                <button class="button misc" id="decimal" value=".">.</button>
+                <button class="button misc" id="operate">=</button>
+                <button class="button misc" id="clear">Clear</button>
+                <button class="button misc" id="undo">Undo</button>
+            </div>
         </div>
-        <div class="buttons">
-            <button class="button digit" id="zero" value="0">0</button>
-            <button class="button digit" id="one" value="1">1</button>
-            <button class="button digit" id="two" value="2">2</button>
-            <button class="button digit" id="three" value="3">3</button>
-            <button class="button digit" id="four" value="4">4</button>
-            <button class="button digit" id="five" value="5">5</button>
-            <button class="button digit" id="six" value="6">6</button>
-            <button class="button digit" id="seven" value="7">7</button>
-            <button class="button digit" id="eight" value="8">8</button>
-            <button class="button digit" id="nine" value="9">9</button>
-            <button class="button operator" id="add" value="+">+</button>
-            <button class="button operator" id="subtract" value="-">-</button>
-            <button class="button operator" id="multiply" value="*">*</button>
-            <button class="button operator" id="divide" value="/">/</button>
-            <button class="button" id="decimal" value=".">.</button>
-            <button class="button" id="operate">=</button>
-            <button class="button" id="clear">clear</button>
-            <button class="button" id="undo">undo</button>
         </div>
-    </div>
 </body>
 </html>

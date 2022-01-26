@@ -31,7 +31,7 @@ function operate(a, b, c){
     }
 }
 
-const display = document.getElementById("display");
+const display = document.querySelector(".display");
 
 const digitKeys = document.querySelectorAll(".digit");
 const operatorKeys = document.querySelectorAll(".operator");
@@ -41,6 +41,11 @@ const clear = document.getElementById("clear");
 const undoButton = document.getElementById("undo");
 
 
+/* if first value is present then first value & operator and 
+display value must be present allowing calculation, because if first value is not 
+present and operator not present (first calc case) default is to assign display value to firstValue and operator, else if 
+operator is present then re assign to new operator */
+
 function handleOperator(event){
     let newOperator = event.target.id;
     if(firstValue){
@@ -49,12 +54,14 @@ function handleOperator(event){
         operator = newOperator;
         console.log(firstValue);
         clearDisplay();
+        addToDisplay(firstValue);
     } else if (operator) {
         operator = newOperator;
     } else if (!operator) {
         firstValue = displayValue;
         operator = newOperator;
         clearDisplay();
+        addToDisplay(firstValue);
     }
 }
 
@@ -64,8 +71,10 @@ function handleEquals(){
         firstValue = operate(firstValue, displayValue, operator);
         console.log(firstValue);
         displayValue = "";
+        addToDisplay(firstValue);
     } else if (!operator){
         firstValue = displayValue;
+        addToDisplay(firstValue);
     }
 }
 
@@ -74,11 +83,13 @@ function handleUndo(){
     let newStr = str.slice(0, -1);
     displayValue = newStr;
     console.log(displayValue);
+    addToDisplay(displayValue);
 }
 
 function handleDigit(event){
     displayValue = displayValue + event.target.value;
     console.log(displayValue);
+    addToDisplay(displayValue);
 }
 
 function handleDecimal(event){
@@ -104,8 +115,6 @@ operateButton.addEventListener('click', () => {
     handleEquals();
 })
 
-
-
 let displayValue = "";
 let decimal = "";
 let firstValue = "";
@@ -119,13 +128,13 @@ clear.addEventListener('click', event => {
 });
 
 function clearDisplay() {
-    document.getElementById("display").innerHTML = "";
+    display.innerHTML = "";
     displayValue = "";
     decimal = "";
 };
 
 function hardReset() {
-    document.getElementById("display").innerHTML = "";
+    display.innerHTML = "";
     displayValue = "";
     operator = "";
     firstValue = "";
@@ -136,4 +145,7 @@ function showDisplayValue(){
     console.log(displayValue);
 };
 
+function addToDisplay(displayValue){
+    display.innerHTML = displayValue;
+}
 
